@@ -1,0 +1,113 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Loader Section */
+  body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+  }
+  
+  .background {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Gradient Animation */
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .loader-container {
+    text-align: center;
+    color: white;
+  }
+  
+  .loader {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #00ffff;
+    animation: pulse 1.0s infinite ease-in-out;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #00ffff;
+    }
+    50% {
+      transform: scale(1.2);
+      box-shadow: 0 0 25px #fff, 0 0 35px #ff00ff, 0 0 50px #00ffff;
+    }
+  }
+  
+  .loading-text {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    animation: textFlicker 2s infinite;
+  }
+  
+  @keyframes textFlicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+body{
+    background-image: url(digital-technology-concept-background_769134-157.avif);
+    position: fixed;
+    object-fit: cover;
+    color: azure;
+}
+h2{
+    color: rgba(203, 176, 20, 0.858);
+    text-decoration: underline;
+    line-height: 2;  
+    text-indent: 25px;
+    position: relative;
+    top: 30px;
+}
+p{
+    position: relative;
+    top: 25px;
+    letter-spacing: 2px;
+    text-indent: 25px;
+    
+}
+h1{
+    text-align: center;
+    align-items: center;
+    color: rgb(206, 229, 113);
+
+}
+
+#animated-heading {
+    font-size: 2em;
+    font-family: Arial, sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid orange;
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
