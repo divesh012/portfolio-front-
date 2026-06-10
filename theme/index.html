@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Animation Example</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .title {
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .roles {
+      font-size: 24px;
+      color: #0078d7;
+      overflow: hidden;
+      height: 30px;
+    }
+
+    .roles span {
+      display: inline-block;
+      animation: rotateText 6s infinite;
+    }
+
+    @keyframes rotateText {
+      0%, 20% {
+        transform: translateY(0);
+      }
+      40%, 60% {
+        transform: translateY(-30px);
+      }
+      80%, 100% {
+        transform: translateY(-60px);
+      }
+    }
+
+    .roles span:not(:first-child) {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+   
+    <div class="roles">
+      <span>Software Engineer</span>
+      <span>Developer</span>
+      <span>Tech Enthusiast</span>
+    </div>
+  </div>
+
+</body>
+</html>
